@@ -3,7 +3,7 @@ GET http://localhost:3008/movies/
 ###
 
 POST http://localhost:3008/movies/
-Content-Type: application/json; 
+Content-Type: application/json
 
 {
   "directorId": 6,
@@ -18,7 +18,7 @@ GET http://localhost:3008/movies/96/
 ###
 
 PUT http://localhost:3008/movies/102/
-Content-Type: application/json;
+Content-Type: application/json
 
 {
   "directorId": 24,
