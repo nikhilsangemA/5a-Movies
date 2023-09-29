@@ -107,7 +107,10 @@ app.get("/directors/:directorId/movies/", async (request, response) => {
   const { directorId } = request.params;
   const selectDirectorMovie = `SELECT movie_name FROM movie WHERE director_id = ${directorId}`;
   const dbresponse = await db.all(selectDirectorMovie);
-  response.send(dbresponse);
+  console.log(dbresponse);
+  response.send(
+    dbresponse.map((eachPlayer) => convertIntoResponse(eachPlayer))
+  );
 });
 
 //
